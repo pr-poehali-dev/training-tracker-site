@@ -35,3 +35,14 @@ export interface AthleteStats {
   favoriteType: string;
   streakDays: number;
 }
+
+export interface Trainer {
+  id: string;
+  name: string;
+  specialty: string;
+  experience: number;
+  rating: number;
+  photo: string;
+  description: string;
+  achievements: string[];
+}

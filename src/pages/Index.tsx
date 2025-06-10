@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import TrainerCard from "@/components/TrainerCard";
+import { mockTrainers } from "@/lib/mockData";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -128,6 +130,34 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trainers Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Наши тренеры
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Профессиональные инструкторы с многолетним опытом помогут вам
+              достичь ваших целей
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {mockTrainers.map((trainer) => (
+              <TrainerCard key={trainer.id} trainer={trainer} />
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button variant="outline" size="lg" className="px-8">
+              <Icon name="Users" className="h-5 w-5 mr-2" />
+              Посмотреть всех тренеров
+            </Button>
           </div>
         </div>
       </section>

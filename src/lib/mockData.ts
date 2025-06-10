@@ -1,4 +1,4 @@
-import { Training, AthleteStats } from "@/types";
+import { Training, AthleteStats, Trainer } from "@/types";
 
 export const mockTrainings: Training[] = [
   {
@@ -49,3 +49,41 @@ export const mockAthleteStats: AthleteStats = {
   favoriteType: "cardio",
   streakDays: 5,
 };
+
+export const mockTrainers: Trainer[] = [
+  {
+    id: "trainer1",
+    name: "Анна Петрова",
+    specialty: "Кардио и функциональный тренинг",
+    experience: 8,
+    rating: 4.9,
+    photo:
+      "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=300&h=300&fit=crop&crop=face",
+    description:
+      "Сертифицированный тренер по кардио-тренировкам и функциональному фитнесу",
+    achievements: ["Мастер спорта по легкой атлетике", "Сертификат ACSM"],
+  },
+  {
+    id: "trainer2",
+    name: "Михаил Иванов",
+    specialty: "Силовой тренинг и пауэрлифтинг",
+    experience: 12,
+    rating: 4.8,
+    photo:
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=300&fit=crop&crop=face",
+    description:
+      "Эксперт в области силовых тренировок и работы с профессиональными спортсменами",
+    achievements: ["КМС по пауэрлифтингу", "Тренер высшей категории"],
+  },
+  {
+    id: "trainer3",
+    name: "Елена Смирнова",
+    specialty: "Йога и растяжка",
+    experience: 6,
+    rating: 4.9,
+    photo:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&crop=face",
+    description: "Инструктор йоги и специалист по восстановительным практикам",
+    achievements: ["Сертификат RYT-500", "Специалист по йога-терапии"],
+  },
+];
